@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+/* index.css */
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  :root {
+    --font-sans: 'Poppins', 'Inter', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+}
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(
+      to right,
+      hsl(270, 91%, 65%),
+      hsl(30, 100%, 60%)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .card-glow {
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-glow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(138, 43, 226, 0.25);
+  }
+
+  .btn-shiny {
+    @apply px-4 py-2 rounded-lg font-semibold text-white;
+    background: linear-gradient(
+      to right,
+      hsl(270, 91%, 65%),
+      hsl(30, 100%, 60%)
+    );
+    box-shadow: 0 4px 14px rgba(138, 43, 226, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .btn-shiny:hover {
+    box-shadow: 0 8px 30px rgba(138, 43, 226, 0.4);
+    transform: translateY(-2px);
+  }
+}
+@layer utilities {
+  .btn-shiny {
+    @apply px-4 py-2 rounded-lg font-semibold text-white;
+    background: linear-gradient(
+      to right,
+      hsl(270, 91%, 65%),
+      hsl(30, 100%, 60%)
+    );
+    box-shadow: 0 4px 14px rgba(138, 43, 226, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .btn-shiny:hover {
+    box-shadow: 0 8px 30px rgba(138, 43, 226, 0.4);
+    transform: translateY(-2px);
+  }
+}
